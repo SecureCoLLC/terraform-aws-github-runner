@@ -54,6 +54,9 @@ module "runners" {
   subnet_ids  = var.subnet_ids
   environment = var.environment
   tags        = local.tags
+
+  block_device_mappings = var.block_device_mappings
+
   encryption = {
     kms_key_id = local.kms_key_id
     encrypt    = var.encrypt_secrets
